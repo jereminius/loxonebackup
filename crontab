@@ -1,0 +1,2 @@
+0 1 * * * /usr/loxone_scheduler/loxone_backup.sh
+
