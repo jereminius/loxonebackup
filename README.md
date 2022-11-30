@@ -1,6 +1,6 @@
 # Loxone Backup
 
-It is a tool for making and archiving daily backups of your Loxone Miniserver.
+A tool for making and archiving daily backups of your Loxone Miniserver.
 
 # How to use?
 ## Docker
