@@ -1,12 +1,14 @@
 FROM alpine:3.17
 
 # Install required packages
-RUN apk add --update --no-cache bash dos2unix
+RUN apk add --update --no-cache bash dos2unix   \
+        wget  \
+        tzdata
 RUN apk update
-RUN apk add wget
 
 WORKDIR /usr/loxone_scheduler
 
+ENV TZ=UTC
 ENV LOXONE_ADDRESS=
 ENV LOXONE_USER=
 ENV LOXONE_PASSWORD=
