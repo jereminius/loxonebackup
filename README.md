@@ -7,6 +7,7 @@ A tool for making and archiving daily backups of your Loxone Miniserver.
 ```console
 docker run --d \
     -v /path/to/backup:/backups \
+    -e TZ=your_timezone \
     -e LOXONE_ADDRESS=your_loxone_miniserver_ip \
     -e LOXONE_USER=your_loxone_username \
     -e LOXONE_PASSWORD=your_loxone_password \
@@ -21,6 +22,7 @@ This image uses environment variables for configuration.
 
 |Available variables     |Default value        |Description                                         |
 |------------------------|---------------------|----------------------------------------------------|
+|`TZ`    |ETC           |Your timezone|
 |`LOXONE_ADDRESS`    |no default           |The IP address of your Loxone Miniserver|
 |`LOXONE_USER`    |no default           |Your Loxone username |
 |`LOXONE_PASSWORD` |no default|Your Loxone password|
