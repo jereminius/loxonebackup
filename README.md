@@ -61,7 +61,7 @@ For custom CRON expressions, you can use https://crontab.guru
 ```bash
 docker run --d \
     --name loxonebackup \
-    -v /path/to/backup:/backups \
+    -v /path/to/backup:/usr/loxone_scheduler/backups \
     -e TZ=your_timezone \
     -e LOXONE_ADDRESS=your_loxone_miniserver_ip \
     -e LOXONE_USER=your_loxone_username \
@@ -87,6 +87,6 @@ services:
       - LOXONE_PASSWORD=your_loxone_password
       - DELETE_OLD=days_to_keep_archives
     volumes:
-      - /path/to/backup:/backups
+      - /path/to/backup:/usr/loxone_scheduler/backups
     restart: unless-stopped
 ```
